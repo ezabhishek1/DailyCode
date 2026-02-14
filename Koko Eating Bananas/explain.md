@@ -1,9 +1,26 @@
-Koko can eat only 1 pile in 1 hour.
-He can eat either entire pile or some Bananas from pile in 1 hour.
-Suppose largest pile in whole array is of size 'hi'.
-Then maximum speed of Koko can be 'hi' bananas per hour.
-This will result in time equal to size of array.
-Minimum speed of Koko can be 'lo' or 1 bananas per hour.
-This will result in time equal to total bananas in all pile.
-Aim: To find minimum speed such that time taken to finish all pile is less than or equal to k.
-Approach: Binary search on all speeds from 1 to 'hi'
+# Koko Eating Bananas
+
+## Problem Overview
+
+- Koko can eat only **1 pile in 1 hour**
+- He can eat either the entire pile or some bananas from a pile in 1 hour
+- **Goal**: Find the minimum eating speed so all piles are finished within `k` hours
+
+## Key Constraints
+
+### Maximum Speed
+- **Speed**: Equal to the largest pile size (`hi`)
+- **Result**: Time taken = number of piles (array length)
+
+### Minimum Speed
+- **Speed**: 1 banana per hour (`lo`)
+- **Result**: Time taken = total bananas across all piles
+
+## Solution Approach
+
+**Binary Search** on all possible speeds from `1` to `hi`
+
+### Why Binary Search?
+- As speed increases, time decreases (monotonic relationship)
+- We need to find the minimum viable speed that satisfies the constraint
+- Search space is continuous from 1 to max pile size
