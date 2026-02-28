@@ -5,40 +5,41 @@ Given two sorted arrays `a` and `b`, and a target sum `x`, find a pair of elemen
 
 ## Approach: Two-Pointer Technique
 
-### Algorithm Explanation
-1. **Initialize pointers**: 
-   - `i` at the start of array `a` (index 0)
-   - `j` at the end of array `b` (index m-1)
+### Algorithm Steps
 
-2. **Track the best pair**: Maintain the pair with minimum difference from target `x` and the minimum difference value
+1. **Place one pointer at the start of arr1** (`i = 0`) and one at the end of arr2 (`j = m-1`).
 
-3. **Iterate and adjust**:
-   - Calculate sum of current elements: `sum = a[i] + b[j]`
-   - Compare sum with target `x`:
-     - If sum equals `x`, return immediately (optimal solution found)
-     - If sum > `x`, decrement `j` (reduce sum)
-     - If sum < `x`, increment `i` (increase sum)
-   - Update best pair whenever a smaller difference is found
+2. **Compute the sum**: Calculate `sum = arr1[i] + arr2[j]`.
 
-4. **Return result**: The pair with the minimum absolute difference from `x`
+3. **Track the closest sum to x**: Compare the current sum with target `x` and update the best pair if the difference is smaller.
+
+4. **Adjust pointers based on sum**:
+   - If `sum > x`: Move `j--` (decrement to reduce the sum)
+   - If `sum < x`: Move `i++` (increment to increase the sum)
+   - If `sum == x`: Found exact match, return immediately
+
+5. **Continue until pointers go out of range**: Loop ends when `i >= n` or `j < 0`.
+
+6. **Return the closest pair**: Return the pair with the minimum absolute difference from `x`.
 
 ### Why This Works
 - **Sorted arrays** allow us to efficiently search the solution space
 - **Two pointers** from opposite ends help navigate toward the target sum
 - Moving pointers correctly **eliminates impossible regions**, ensuring linear time complexity
+- Each pointer moves through the array at most once, never backtracking
 
 ## Complexity Analysis
 
-### Time Complexity: **O(n + m)**
+### Time Complexity: O(n + m)
 - Where `n` is the size of array `a` and `m` is the size of array `b`
-- Each pointer moves at most once through their respective arrays
-- Together, at most `n + m` iterations occur
-- No nested loops, making this linear in total array size
+- Each pointer moves through its array at most once
+- Total iterations: at most `n + m`
+- No nested loops involved
 
-### Space Complexity: **O(1)**
-- Only uses a few variables (`i`, `j`, `mindiff`, `best`)
-- No additional data structures dependent on input size
-- Output array doesn't count toward auxiliary space
+### Auxiliary Space: O(1)
+- Only uses a constant amount of extra space
+- Variables: `i`, `j`, `mindiff`, and `best` pair
+- No additional data structures that scale with input size
 
 ## Use Cases
 
@@ -57,3 +58,61 @@ Given two sorted arrays `a` and `b`, and a target sum `x`, find a pair of elemen
 ## Disadvantages
 - ❌ Requires both arrays to be sorted beforehand
 - ❌ Cannot find multiple pairs (only returns one closest pair)
+
+## C++ Implementation Details
+
+### Code Breakdown
+
+```cpp
+vector<int> findClosestPair(vector<int> &a, vector<int> &b, int x) {
+    int n=a.size(), m=b.size();           // Get array sizes
+    int i=0, j=m-1, mindiff=INT_MAX;      // Initialize pointers and min difference
+    vector<int> best;                      // Store the best pair found
+    
+    while(i<n && j>=0){                   // Continue while pointers are valid
+        int sum = a[i] + b[j];             // Calculate current sum
+        
+        // Update best pair if current difference is smaller
+        if(mindiff > abs(sum - x)){
+            mindiff = abs(sum - x);
+            best = {a[i], b[j]};
+        }
+        
+        // Adjust pointers based on sum vs target
+        if(sum > x){
+            j--;                           // Sum too large, decrease from right
+        } else if(sum < x){
+            i++;                           // Sum too small, increase from left
+        } else {
+            return {a[i], b[j]};          // Perfect match found!
+        }
+    }
+    return best;                           // Return closest pair
+}
+```
+
+### How the Two-Pointer Logic Works
+
+1. **Initialization**:
+   - `i = 0`: Start at the beginning of array `a` (smallest element)
+   - `j = m-1`: Start at the end of array `b` (largest element)
+   - `mindiff = INT_MAX`: Initialize with largest possible integer
+   - `best`: Empty vector to store the result
+
+2. **Main Loop Logic**:
+   - **Calculate sum**: Add current elements `a[i] + b[j]`
+   - **Check optimality**: If absolute difference from target is better, update `best` and `mindiff`
+   - **Pointer movement**:
+     - If `sum > x`: We need a smaller sum, so `j--` (move left in `b`, get smaller numbers)
+     - If `sum < x`: We need a larger sum, so `i++` (move right in `a`, get larger numbers)
+     - If `sum == x`: Perfect match! Return immediately
+
+3. **Return Value**: 
+   - Early return when exact match is found
+   - Otherwise, return the pair with minimum difference
+
+### Key Insights for the Algorithm
+
+- **Why it works**: Sorted arrays ensure moving `i` right increases sum and moving `j` left decreases sum
+- **Termination**: Loop stops when `i >= n` or `j < 0`, meaning we've explored all viable combinations
+- **Optimality**: Due to sorting and the nature of pointer movement, we cannot miss the optimal pair
