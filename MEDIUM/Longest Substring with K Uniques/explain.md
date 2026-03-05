@@ -3,30 +3,30 @@
 ## Problem Statement
 Given a string `s` and an integer `k`, find the length of the longest substring that contains exactly `k` distinct/unique characters. Return -1 if no such substring exists.
 
-## Approach: Sliding Window with HashMap
+## Approach 1: Sliding Window with HashMap
 
 ### Intuition
-Instead of checking all possible substrings (O(n²)), we use a sliding window technique:
-- Maintain a window with exactly k distinct characters
-- Expand the window by moving the right pointer
-- When we have more than k distinct characters, shrink from the left
-- Track the maximum length whenever we have exactly k distinct characters
+We want the longest substring that contains **exactly k distinct characters**.  
+A brute force approach would check all substrings, but that's inefficient.  
+Instead, we can use the **sliding window** technique: expand the right pointer to include new characters, and shrink from the left when we have more than `k` unique characters.
 
 ### Algorithm
-1. Initialize `char_count` (HashMap), `max_length = -1`, `start = 0`
-2. For each position `end` from 0 to n-1:
-   - Add `s[end]` to the window and increment its count
-   - While we have more than k distinct characters:
-     - Decrease count of `s[start]`
-     - Remove character if count becomes 0
-     - Move `start` forward
-   - If we have exactly k distinct characters:
-     - Update `max_length` with current window size: `end - start + 1`
-3. Return `max_length`
+1. Maintain a sliding window `[l, r]` using two pointers.
+2. Use a frequency map to count character occurrences inside the window.
+3. For each new character at `r`:
+   - Add it to the map.
+   - If the number of unique characters exceeds `k`, shrink from the left until it's valid.
+   - If the number of unique characters equals `k`, update the maximum length.
+4. Return the maximum found length, or `-1` if no valid substring exists.
 
 ### Complexity Analysis
-- **Time Complexity**: O(n) - Each character is visited at most twice (once by right pointer, once by left)
-- **Space Complexity**: O(k) - HashMap stores at most k distinct characters
+- **Time Complexity**: O(n log k) using `map`, or **O(n)** using `unordered_map` (average case)
+- **Space Complexity**: O(k) for the frequency map
+
+### Extra Notes
+- Initializing `max_length` as `-1` ensures we can detect if no substring with exactly `k` unique characters exists.
+- Replacing `map` with `unordered_map` improves performance from O(n log k) to O(n).
+- Each character is visited at most twice: once by the right pointer and once by the left pointer.
 
 ---
 
