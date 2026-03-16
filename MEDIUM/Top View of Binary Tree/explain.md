@@ -20,3 +20,12 @@ Answer:
 - Yes, you can use DFS, but it will make your code a bit trickier, and it may give you wrong results!
 - DFS can go deep and overwrite nodes at the same HD, which breaks the “topmost” rule.
 - BFS naturally ensures shallow nodes are processed first.
+
+
+2. Is the question not equivalent to:
+  - Just find all the nodes on the spine of the tree?
+  - Start with the bottom left leaf, keep going up along the left slope.
+  - Once you reach root, go down along the right slope.
+  - Ignore all the other nodes in the tree.
+Is it not so like that? 
+Huh, then why should we choose a more difficult way to solve it?!
