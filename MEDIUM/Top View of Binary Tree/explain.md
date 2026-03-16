@@ -11,3 +11,12 @@
 🔎 Hint 3: Sorting the result
 - After traversal, you’ll have a map from HD → node value.
 - To print from leftmost to rightmost, sort the keys (HDs) and collect values in order.
+
+
+# Some BUGGY QUESTIONS: 
+
+1. Why can't I use DFS instead of BFS?! It works well too, does it not?
+Answer: 
+- Yes, you can use DFS, but it will make your code a bit trickier, and it may give you wrong results!
+- DFS can go deep and overwrite nodes at the same HD, which breaks the “topmost” rule.
+- BFS naturally ensures shallow nodes are processed first.
