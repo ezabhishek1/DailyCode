@@ -28,4 +28,16 @@ Answer:
   - Once you reach root, go down along the right slope.
   - Ignore all the other nodes in the tree.
 Is it not so like that? 
+
 Huh, then why should we choose a more difficult way to solve it?!
+
+Answer:
+Well, great question. 
+I had done the same thing earlier and faced failed testcases.
+It's because this is not what the problem asks for.
+
+- The top view isn’t just the extreme left and right chains. 
+   It’s the first node you encounter at each horizontal distance from the root.
+- For example, if there’s a left child at distance -1 and a right child at distance +1, both should appear. 
+  But if there’s another node deeper at the same horizontal distance, it should be ignored 
+  (because the topmost one is already visible).
