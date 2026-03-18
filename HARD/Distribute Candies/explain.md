@@ -12,3 +12,16 @@ For each node, we calculate:
 
 - If extra > 0 → node gives candies to parent
 - If extra < 0 → node needs candies from parent
+
+
+DFS Logic:
+----------
+1. Traverse left subtree → get left extra
+2. Traverse right subtree → get right extra
+3. Total moves required at this node:
+       moves += abs(left) + abs(right)
+
+   (because each candy movement across an edge counts as 1 move)
+
+4. Return total extra candies to parent:
+       return node->data + left + right - 1
