@@ -25,3 +25,20 @@ DFS Logic:
 
 4. Return total extra candies to parent:
        return node->data + left + right - 1
+
+
+
+
+       Why Postorder?
+--------------
+Because we must first balance left and right subtrees before processing the current node.
+
+Complexity:
+-----------
+Time: O(N)  → each node visited once
+Space: O(H) → recursion stack (H = height of tree)
+
+Summary:
+--------
+We calculate how many candies flow through each edge.
+Total absolute flow gives the minimum number of moves.
