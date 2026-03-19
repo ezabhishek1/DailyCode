@@ -66,3 +66,16 @@ For tree:
 [6, 7, 3, N, 2, 2, 4]
 
 The largest BST subtree has size 3.
+
+
+
+Time and Space Complexity
+Time Complexity: O(N)
+because every node is visited once
+
+Space Complexity: O(H)
+where H is the height of the tree because of recursion stack
+
+Simple conclusion
+The trick is to solve the problem from bottom to top.
+For each node, first check left and right subtrees, then decide whether the whole subtree is BST or not.
