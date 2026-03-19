@@ -20,3 +20,16 @@ min → smallest value in this subtree
 max → largest value in this subtree
 
 size → size of this subtree if it is a BST
+
+Base case
+For null node:
+
+it is a BST
+
+size = 0
+
+min = +infinity
+
+max = -infinity
+
+This helps while checking leaf nodes easily.
