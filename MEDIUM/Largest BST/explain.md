@@ -33,3 +33,36 @@ min = +infinity
 max = -infinity
 
 This helps while checking leaf nodes easily.
+
+### How to check BST at current node
+For a node to form a BST:
+
+left subtree must be BST
+
+right subtree must be BST
+
+current node value must be:
+
+greater than left.max
+
+smaller than right.min
+
+If all these are true, then current subtree is also a BST.
+
+Then:
+
+size = left.size + right.size + 1
+
+update the answer with the maximum size found so far
+
+If not, mark it as invalid BST.
+
+Why this works
+Each node is processed only once, and we already know the result of its children from recursion. So we avoid repeated work.
+
+Example
+For tree:
+
+[6, 7, 3, N, 2, 2, 4]
+
+The largest BST subtree has size 3.
