@@ -1,3 +1,8 @@
+## C++ Solution using BFS (Leaf Trimming / Topological Approach) --> See the Python solution for a recursive approach   
+
+
+
+
 class Solution {
   public:
     vector<int> minHeightRoot(int V, vector<vector<int>>& edges) {
