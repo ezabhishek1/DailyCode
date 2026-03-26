@@ -254,7 +254,7 @@ A: Yes! We're planning to expand to LeetCode, Codeforces, HackerRank soon. Stay 
 
 ---
 
-## 📚 Learning Resources
+## 📚 Learning Resources 
 
 **Problem Platforms (Primary & Future):**
 - [GeeksforGeeks POTD](https://www.geeksforgeeks.org/problem-of-the-day/) - Daily problems (Current)
