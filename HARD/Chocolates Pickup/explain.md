@@ -59,3 +59,18 @@ We fill:
 
 dp[i][j1][j2]
 similarly using 9 transitions.
+
+
+⭐ Time & Space Complexity (Tabulation)
+Time:
+m * n * n * 9 →
+✔ O(m × n²)
+
+Space:
+3D DP table
+✔ O(m × n²)
+
+🎯 Summary
+Method	Code	Time	Space	 
+Memoization	Top-Down	O(m × n²)	O(m × n²)	 
+Tabulation	Bottom-Up	O(m × n²)	O(m × n²)	 
