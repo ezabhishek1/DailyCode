@@ -35,3 +35,15 @@ If both land on the same cell → count chocolate once.
 Else → add chocolates from both cells.
 
 Memoize using a 3D array: dp[i][j1][j2].
+
+⭐ Time & Space Complexity (Memoization)
+Time:
+There are m * n * n states → each tries 9 transitions
+✔ O(m × n² × 9) = O(m × n²)
+
+Space:
+DP array: O(m × n × n)
+
+Recursion stack: O(m)
+
+✔ Space = O(m × n²)
