@@ -47,3 +47,15 @@ DP array: O(m × n × n)
 Recursion stack: O(m)
 
 ✔ Space = O(m × n²)
+
+
+
+✅ PART-2 | Tabulation (Bottom-Up DP)
+------------------------------------------------
+Idea
+We build DP from bottom row to top:
+
+We fill:
+
+dp[i][j1][j2]
+similarly using 9 transitions.
