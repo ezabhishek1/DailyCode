@@ -1,68 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
-  public:
+public:
     vector<int> articulationPoints(int V, vector<vector<int>>& edges) {
+        
+        // Step 1: Build adjacency list
         vector<vector<int>> adj(V);
-        for (auto& e : edges) {
-            adj[e[0]].push_back(e[1]);
-            adj[e[1]].push_back(e[0]);
+        for (auto &e : edges) {
+            int u = e[0], v = e[1];
+            adj[u].push_back(v);
+            adj[v].push_back(u);
         }
 
+        vector<int> tin(V, -1), low(V, -1);
         vector<bool> visited(V, false);
-        vector<int> disc(V, -1);
-        vector<int> low(V, -1);
-        vector<int> parent(V, -1);
-        vector<bool> ap(V, false);
-        int time = 0;
+        vector<bool> isArt(V, false);
 
-        for (int i = 0; i < V; ++i) {
-            if (!visited[i]) {
-                dfs(i, adj, visited, disc, low, parent, ap, time);
-            }
-        }
+        int timer = 0;
 
-        vector<int> result;
-        for (int i = 0; i < V; ++i) {
-            if (ap[i]) {
-                result.push_back(i);
-            }
-        }
+        // DFS function
+        function<void(int, int)> dfs = [&](int node, int parent) {
+            visited[node] = true;
+            tin[node] = low[node] = timer++;
+            int children = 0;
 
-        if (result.empty()) {
-            return {-1};
-        }
+            for (auto it : adj[node]) {
+                if (it == parent) continue;
 
-        return result;
-    }
+                if (!visited[it]) {
+                    dfs(it, node);
 
-private:
-    void dfs(int u, vector<vector<int>>& adj, vector<bool>& visited, vector<int>& disc, vector<int>& low, vector<int>& parent, vector<bool>& ap, int& time) {
-        visited[u] = true;
-        disc[u] = low[u] = ++time;
-        int children = 0;
+                    // update low
+                    low[node] = min(low[node], low[it]);
 
-        for (int v : adj[u]) {
-            if (v == parent[u]) {
-                continue;
-            }
+                    // check articulation condition
+                    if (low[it] >= tin[node] && parent != -1) {
+                        isArt[node] = true;
+                    }
 
-            if (!visited[v]) {
-                parent[v] = u;
-                children++;
-                dfs(v, adj, visited, disc, low, parent, ap, time);
-
-                low[u] = min(low[u], low[v]);
-
-                if (parent[u] != -1 && low[v] >= disc[u]) {
-                    ap[u] = true;
+                    children++;
+                } else {
+                    // back edge
+                    low[node] = min(low[node], tin[it]);
                 }
-            } else {
-                low[u] = min(low[u], disc[v]);
+            }
+
+            // root case
+            if (parent == -1 && children > 1) {
+                isArt[node] = true;
+            }
+        };
+
+        // Run DFS for all components
+        for (int i = 0; i < V; i++) {
+            if (!visited[i]) {
+                dfs(i, -1);
             }
         }
 
-        if (parent[u] == -1 && children >= 2) {
-            ap[u] = true;
+        // Collect answer
+        vector<int> result;
+        for (int i = 0; i < V; i++) {
+            if (isArt[i]) result.push_back(i);
         }
+
+        if (result.empty()) return {-1};
+        return result;
     }
 };
