@@ -17,5 +17,5 @@ class Solution:
                 dp[k][i+1] = dp[k][i]
                 if k-arr[i] >= 0:
                     dp[k][i+1] += dp[k-arr[i]][i]
-
+                    
         return dp[-1][-1]
