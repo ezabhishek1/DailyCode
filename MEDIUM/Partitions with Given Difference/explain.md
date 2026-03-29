@@ -22,8 +22,6 @@ Detailed Code with Comments
 
 
 
-Ayush Kumar
-1 year agoMay 24, 2024 10:14 (GMT +5:30)
 
 Intuition and Approach for Counting Subset Partitions with Given Difference | C++ ✅✅✅
 ---------------------------------------------------------------
