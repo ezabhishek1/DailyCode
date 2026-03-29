@@ -8,11 +8,11 @@ class Solution:
         s = (s-diff)//2
  
         dp = [[0]*(n+1) for _ in range(s+1)]
-      
+       #  dp[0] = [1]*(n+1) this is wrong initialization when there is element that is 0
         dp[0][0] = 1
             
         
-        for k in range(0, s+1): 
+        for k in range(0, s+1): # sum has to start from 0 to count for element with 0 value
             for i in range(n):
                 dp[k][i+1] = dp[k][i]
                 if k-arr[i] >= 0:
