@@ -48,3 +48,24 @@ Space Complexity: O(N²) (for storing edges).
 
 
 
+
+
+📝 Explanation of Key Parts
+Disjoint Set Union (DSU):
+
+findPar(node) uses path compression to optimize future queries.
+
+unionByRank(u, v) ensures the tree remains balanced, keeping operations near O(1) amortized.
+
+Kruskal's Algorithm:
+
+Priority Queue (min-heap) ensures we always pick the smallest edge first.
+
+Cycle Detection is done using DSU—if two nodes have the same parent, adding an edge between them forms a cycle.
+
+Manhattan Distance Calculation:
+
+For two points (x1, y1) and (x2, y2), the cost is |x1 - x2| + |y1 - y2|.
+
+
+
