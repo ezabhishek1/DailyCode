@@ -37,3 +37,14 @@ The algorithm stops when all nodes are connected (forming an MST).
 
 
 
+
+
+⏳ Time & Space Complexity
+Time Complexity: O(N² log N) (due to sorting edges via priority queue).
+
+Space Complexity: O(N²) (for storing edges).
+
+
+
+
+
