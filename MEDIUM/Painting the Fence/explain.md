@@ -1,1 +1,0 @@
-It is basic permutation and combinations question. For example ways to fill n=4 place with k=3(BRGY) colours. _ _ _ _ => for first place we have k options.B_ _ _ => now it can be any of k options. B B _ _ => if B used then we have 3 options to fill next place. if B Y _ _ => if B not used we have k=4 options to fill the next place
