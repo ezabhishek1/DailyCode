@@ -1,0 +1,1 @@
+In This Question The ignore the trie breaker condition in the test cases its not implemented just avoid it and do compare only the frequency . it will give correct answer.
