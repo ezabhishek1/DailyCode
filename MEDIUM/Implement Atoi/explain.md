@@ -7,3 +7,6 @@ Start by skipping all the leading whitespaces using a simple for loop.
 
 Then, check if the current character is '+' or '-' and update the sign.
 
+Iterate over the remaining characters:
+
+
