@@ -16,3 +16,7 @@ num > (Integer.MAX_VALUE - digit) / 10
 
 If overflow is possible, return Integer.MAX_VALUE or Integer.MIN_VALUE depending on the sign.
 
+Otherwise, update num = num * 10 + digit.
+
+Stop parsing when a non-digit character is found.
+
