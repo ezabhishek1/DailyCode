@@ -11,4 +11,6 @@ Iterate over the remaining characters:
 
 If the character is a digit, convert it to an integer using ch - '0'.
 
+Before adding it to the number, check if it will cause overflow using the condition:
+num > (Integer.MAX_VALUE - digit) / 10
 
