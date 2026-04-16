@@ -9,4 +9,6 @@ Then, check if the current character is '+' or '-' and update the sign.
 
 Iterate over the remaining characters:
 
+If the character is a digit, convert it to an integer using ch - '0'.
+
 
