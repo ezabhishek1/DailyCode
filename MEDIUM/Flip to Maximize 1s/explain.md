@@ -15,6 +15,16 @@ But before that store the currrent counts of ones
 
 - Result: The final answer is the original number of 1s plus the maximum gain: oneCnt + ans.
 
+# 3. Example Walkthrough
+- Input: [1, 0, 0, 1, 0]
+
+-- Original 1s: 2
+
+-- Transformed Array: [-1, 1, 1, -1, 1]
+
+-- Max Subarray Sum (Kadane's): 2 (from subarray [1, 1])
+
+-- Result: 2 + 2 = 4
 
 ## The Input will be : ------   
 
