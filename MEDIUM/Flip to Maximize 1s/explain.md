@@ -1,4 +1,1 @@
-The Input will be : ------   
-
-10
-1 0 0 1 1 0 0 0 1 0
+Approach: Kadane’s Algorithm (Optimal)
