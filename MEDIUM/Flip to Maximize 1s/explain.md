@@ -26,6 +26,13 @@ But before that store the currrent counts of ones
 
 -- Result: 2 + 2 = 4
 
+# 4. Complexity Analysis
+- Time Complexity: O(N)
+
+- We traverse the array twice (once for transformation/counting and once for Kadane’s). This results in linear time.
+
+Space Complexity: O(1)
+
 ## The Input will be : ------   
 
 10
