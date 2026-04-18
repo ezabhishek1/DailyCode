@@ -50,3 +50,31 @@ Space Complexity: O(1)
 ### Time Complexity of O(n) and Space Complexity of O(1).
 
 
+
+
+first states for one, zero, & max
+
+ONE=0	ZERO=0	 	MXi=0	 
+Now RUN the Loop	< ONE >	< ZERO >	 	
+ <MXi>
+
+MXi=max(ZERO,MXi)
+
+ 
+ 	1	-1	 	  0	 
+ 	1	1	 	1	 
+ 	1	2	 	2	 
+ 	2	1	 	2	 
+ 	3	0	 	2	 
+ 	3	1	 	2	 
+ 	3	2	 	2	 
+ 	3	3	 	3	 
+ 	4	2	 	3	 
+ 	4	3	 	3	 
+ 	 	 	 	 	 
+After runing	the loop	 we got	 	 this result.....	 
+ 	 	 	 	 	 
+At the end =====	 one=4	     &	 	 max=3	 
+ 	 	 	 	 	 
+ 	The answer =	(one+max)	 	 7 (Correct)[out put]	 
+ 	 	 	 	 
