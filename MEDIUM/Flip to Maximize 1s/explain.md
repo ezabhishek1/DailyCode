@@ -33,7 +33,20 @@ But before that store the currrent counts of ones
 
 Space Complexity: O(1)
 
-## The Input will be : ------   
+# The Input will be : ------   
 
 10
 1 0 0 1 1 0 0 0 1 0
+
+# [EXPLANATION ]
+
+- Everytime we get 1, we increment oneCount to keep track of all ones.
+- If we get 0, we can potentially convert it to 1. So ans++ as we have converted zero to one.
+- Now, it may be possible we get max number of 1's by flipping 1 to 0.
+- For ex, 01001000   here we flip all numbers from index 2 to 7.
+- So, in case we get a 1, we decrement our ans, becoz by flipping it we reduced our number of ones.
+- But, as you can see it is decreasing our ans, so to balance that
+- At the end, we return oneCount+ans.
+### Time Complexity of O(n) and Space Complexity of O(1).
+
+
