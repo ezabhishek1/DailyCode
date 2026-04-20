@@ -23,3 +23,8 @@ In this scenario, Position 1 acts as the "new" forbidden home for Ball $i$. This
 
 Ways: $D(n - 1)$.
 
+## The Mathematical Relation
+Since there are $(n - 1)$ choices for the initial position of Ball 1, the total count is:
+
+$$D(n) = (n - 1) \times [D(n - 1) + D(n - 2)]$$
+
