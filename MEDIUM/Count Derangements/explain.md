@@ -28,3 +28,8 @@ Since there are $(n - 1)$ choices for the initial position of Ball 1, the total 
 
 $$D(n) = (n - 1) \times [D(n - 1) + D(n - 2)]$$
 
+## Base Cases
+$D(1) = 0$ (A single ball cannot be placed in a wrong position).
+
+$D(2) = 1$ (The only way is to swap the two balls: [2, 1]).
+
