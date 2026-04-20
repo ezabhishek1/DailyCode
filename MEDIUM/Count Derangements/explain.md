@@ -16,3 +16,10 @@ Remaining Task: we now need to derange the remaining $(n - 2)$ elements.
 
 Ways: $D(n - 2)$.
 
+## Case 2: Ball $i$ moves to any position EXCEPT Position 1
+The Constraint: Ball 1 is in Position $i$, but Ball $i$ is forbidden from going to Position 1.
+
+In this scenario, Position 1 acts as the "new" forbidden home for Ball $i$. This is equivalent to finding a derangement for the remaining $(n - 1)$ elements (treating Position 1 as the forbidden spot for Ball $i$).
+
+Ways: $D(n - 1)$.
+
