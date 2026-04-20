@@ -33,3 +33,14 @@ $D(1) = 0$ (A single ball cannot be placed in a wrong position).
 
 $D(2) = 1$ (The only way is to swap the two balls: [2, 1]).
 
+## Example Walkthrough (n = 4)
+To find $D(4)$:
+
+Using the formula: $3 \times [D(3) + D(2)]$
+
+We know $D(2) = 1$.
+
+Calculate $D(3) = 2 \times [D(2) + D(1)] = 2 \times [1 + 0] = 2$.
+
+Result: $D(4) = 3 \times [2 + 1] = 9$.
+
