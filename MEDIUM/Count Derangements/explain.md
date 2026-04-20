@@ -44,3 +44,8 @@ Calculate $D(3) = 2 \times [D(2) + D(1)] = 2 \times [1 + 0] = 2$.
 
 Result: $D(4) = 3 \times [2 + 1] = 9$.
 
+
+## Complexity Analysis
+Time Complexity: $O(n)$ – We iterate from $3$ to $n$ once.
+
+Space Complexity: $O(1)$ – If using an iterative approach with two variables (prev1, prev2), we don't need an entire array.
