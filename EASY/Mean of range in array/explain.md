@@ -15,3 +15,6 @@
 
 - Return the final answer array.
 
+## Expected complexity says Auxiliary Space could be O(n), but shouldn't it be O(q) as the resultant array will be of size q?
+
+## Usually, resultant array Space is not considered while explaining in interviews though.
