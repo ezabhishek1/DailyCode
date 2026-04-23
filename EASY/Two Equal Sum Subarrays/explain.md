@@ -17,3 +17,32 @@ Given an array of integers arr, return true if it is possible to split it in two
 
 # Space Complexity: 
 - The algorithm uses O(1) space, as it only requires a few additional variables.
+
+
+# DRY RUN:
+
+Let's dry run the solution using the first example:
+
+## Input: arr = [1, 2, 3, 4, 5, 5]
+
+- Step 1: Calculate the total sum of the array:
+
+totalSum = 1 + 2 + 3 + 4 + 5 + 5 = 20
+-
+- Step 2: Initialize partialSum to 0:
+
+partialSum = 0
+
+- Step 3: Start iterating from the last element to the first:
+
+-- Iteration 1 (i = 5):
+--- partialSum = 0 + 5 = 5
+--- totalSum = 20 - 5 = 15
+--- partialSum != totalSum
+-- Iteration 2 (i = 4):
+--- partialSum = 5 + 5 = 10
+--- totalSum = 15 - 5 = 10
+---partialSum == totalSum, so return true.
+
+
+## Output: The function returns true, which is correct.
