@@ -11,3 +11,7 @@ Given an array of integers arr, return true if it is possible to split it in two
 --- Subtract the current element from totalSum (effectively splitting the array into two parts: the part on the right contributing to partialSum, and the part on the left contributing to totalSum).
 -- Check if partialSum equals totalSum. If they are equal, it means the array can be split into two subarrays with equal sums, so return true.
 - Step 4: Return False if No Split Found: If no such split is found after the loop, return false.
+
+# Time Complexity: 
+- The algorithm runs in O(n) time, where n is the size of the array. This is because we traverse the array twice (once to calculate the total sum and once to find the split point).
+
