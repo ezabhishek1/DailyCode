@@ -15,3 +15,5 @@ Given an array of integers arr, return true if it is possible to split it in two
 # Time Complexity: 
 - The algorithm runs in O(n) time, where n is the size of the array. This is because we traverse the array twice (once to calculate the total sum and once to find the split point).
 
+# Space Complexity: 
+- The algorithm uses O(1) space, as it only requires a few additional variables.
