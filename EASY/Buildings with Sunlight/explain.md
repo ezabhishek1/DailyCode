@@ -37,4 +37,14 @@ Update max height
 ### This converts a potentially O(n²) problem into an O(n) solution.
 
 
+# 3) Algorithm :
+
+## Base Case
+
+- If array has at least one building:
+-- First building always gets sunlight
+-- → initialize:
+---- max_building_len_so_far = arr[0]
+---count = 1
+
 
