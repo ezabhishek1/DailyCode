@@ -73,3 +73,6 @@ Update max height
 - Where , n is the size of array
 
 
+# 5) Dry Run:
+
+
