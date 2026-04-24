@@ -19,3 +19,7 @@ If a taller building exists on the left, it blocks sunlight for smaller building
 11 → taller than all previous → visible
 13 → taller than all previous → visible
  
+ ### Now, Total visible buildings = 4
+
+
+
