@@ -47,4 +47,18 @@ Update max height
 ---- max_building_len_so_far = arr[0]
 ---count = 1
 
+## Steps
+
+- Initialize:
+-- max_building_len_so_far = arr[0]
+-- total_buildings = 1
+
+-Traverse from index 1 to n-1:
+-- If arr[i] > max_building_len_so_far :
+-- total_buildings++
+-- max_building_len_so_far = arr[i]
+
+- Return total_buildings
+ 
+
 
