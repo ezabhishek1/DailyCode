@@ -22,4 +22,16 @@ If a taller building exists on the left, it blocks sunlight for smaller building
  ### Now, Total visible buildings = 4
 
 
+# 2) Intuition
+## The key idea is:
+
+A building receives sunlight only if it is taller than all buildings to its left.
+
+So instead of comparing each building with all previous ones (which is inefficient), we:
+
+Keep track of the maximum height seen so far
+For each building:
+If current height >= max height → it is visible
+Update max height
+
 
