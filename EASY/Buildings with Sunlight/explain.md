@@ -78,4 +78,23 @@ Update max height
 ## Input:
             arr = [6, 2, 8, 4, 11, 13]
 
+## Iterations : 
+
+i = 0 → height = 6
+max_building_len_so_far = 6 → visible → count = 1
+
+i = 1 → height = 2
+2 < 6 → not visible → count = 1
+
+i = 2 → height = 8
+8 > 6 → visible → count = 2 → max_building_len_so_far = 8
+
+i = 3 → height = 4
+4 < 8 → not visible → count = 2
+
+i = 4 → height = 11
+11 > 8 → visible → count = 3 → max_building_len_so_far = 11
+
+i = 5 → height = 13
+13 > 11 → visible → count = 4 → max_building_len_so_far = 13
 
