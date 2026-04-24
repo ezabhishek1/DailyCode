@@ -34,4 +34,7 @@ For each building:
 If current height >= max height → it is visible
 Update max height
 
+### This converts a potentially O(n²) problem into an O(n) solution.
+
+
 
