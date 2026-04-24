@@ -75,4 +75,7 @@ Update max height
 
 # 5) Dry Run:
 
+## Input:
+            arr = [6, 2, 8, 4, 11, 13]
+
 
