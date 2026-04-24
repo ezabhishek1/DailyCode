@@ -61,4 +61,15 @@ Update max height
 - Return total_buildings
  
 
+# 4)Complexity Analysis:
+
+## Time Complexity: O(n)
+
+- Single traversal of array
+
+## Space Complexity: O(1)
+
+- No extra space used
+- Where , n is the size of array
+
 
