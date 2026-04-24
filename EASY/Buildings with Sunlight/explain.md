@@ -98,3 +98,4 @@ i = 4 → height = 11
 i = 5 → height = 13
 13 > 11 → visible → count = 4 → max_building_len_so_far = 13
 
+## Final Answer = 4
