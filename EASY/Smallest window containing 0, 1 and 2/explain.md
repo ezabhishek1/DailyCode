@@ -14,3 +14,10 @@ Track count of '0', '1', '2'
 When all 3 are present → shrink window from left
 
 Update minimum length
+
+# ⚡ Key Idea
+Maintain count[3] array
+
+If count[0] > 0 && count[1] > 0 && count[2] > 0 → valid window
+
+Try to minimize window size
