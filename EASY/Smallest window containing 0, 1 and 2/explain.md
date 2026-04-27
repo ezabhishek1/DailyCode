@@ -3,7 +3,8 @@
 # 🔹 Problem
 Find the length of the smallest substring that contains all characters '0', '1', and '2'.
 
-💡 Approach (Sliding Window)
+# 💡 Approach (Sliding Window)
+
 We use two pointers (left & right) to maintain a window:
 
 Expand window using right
