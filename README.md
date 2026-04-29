@@ -48,12 +48,18 @@ DailyCode/
 │   ├── Problem 1/
 │   │   ├── explain.md          # Problem explanation & approach
 │   │   ├── solution.cpp         # C++ implementation
-│   │   └── solution.py          # Python implementation
+│   │   ├── solution.py          # Python implementation
+|   |   └── solution.java        # Java implementation 
+|   |    
 │   └── Problem N/
 │       ├── explain.md
 │       ├── solution.cpp
 │       └── solution.py
 │
+├── BASICS/
+│   └── (Similar structure)
+|
+|
 ├── MEDIUM/
 │   └── (Similar structure)
 │
@@ -89,6 +95,7 @@ cd EASY/"Problem Name"
 cat explain.md          # Read the explanation
 cat solution.cpp        # View C++ solution
 cat solution.py         # View Python solution
+cat solution.java       # View Java solution
 ```
 
 ### 3. Learn & Practice
@@ -126,8 +133,9 @@ cat solution.py         # View Python solution
 
 | Difficulty | Count | Topics Covered |
 |------------|-------|-----------------|
-| **EASY** | 10+ | Arrays, Strings, Basic Data Structures |
-| **MEDIUM** | 20+ | Sliding Window, DP, Two Pointers, Hashing |
+| **BASICS** | 12+ | Anagram Palindrome, Remove Spaces|
+| **EASY** | 18+ | Arrays, Strings, Basic Data Structures |
+| **MEDIUM** | 30+ | Sliding Window, DP, Two Pointers, Hashing |
 | **HARD** | 15+ | Advanced DP, Graph Algorithms, Optimization |
 
 ---
@@ -147,6 +155,7 @@ We ❤️ contributions! Help us grow this repository and make DSA preparation e
    - explain.md (problem explanation & approach)
    - solution.cpp (C++ solution)
    - solution.py (Python solution)
+   - solution..py (Java solution)
    ```
 
 2. **Solution Template** (explain.md)
@@ -201,6 +210,7 @@ We ❤️ contributions! Help us grow this repository and make DSA preparation e
 **Tracking Daily POTD Solutions**
 
 Current Status:
+- ☁️ Basic Problems: Collecting
 - ✅ Easy Problems: Solved & Documented
 - 🔄 Medium Problems: In Progress
 - 🚀 Hard Problems: Being Added
