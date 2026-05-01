@@ -1,0 +1,16 @@
+class Solution {
+
+    static ArrayList<Integer> kthLargest(int[] arr, int k) {
+        ArrayList<Integer> res = new ArrayList<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int i = 0; i < arr.length; i++) {
+            pq.add(arr[i]);
+            if (pq.size() > k) {
+                pq.poll();
+            }
+
+            res.add(pq.size() == k ? pq.peek() : -1);
+        }
+        return res;
+    }
+}
