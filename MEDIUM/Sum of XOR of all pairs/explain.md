@@ -1,0 +1,2 @@
+## Understanding the Sum of XOR of All Pairs
+When dealing with arrays of integers, there are often interesting problems to solve, and one of them is finding the sum of XOR (exclusive OR) of all possible pairs within an array. In this article, we will explore this problem, starting from the intuition behind it and then diving into the approach and optimized code to efficiently solve it. We will also dry run the code with two different examples, providing a clear understanding of how it works. Finally, we will discuss the time and space complexity and conclude the article.
