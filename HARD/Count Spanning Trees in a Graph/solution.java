@@ -23,6 +23,7 @@ class Solution {
         return (int)Math.round(det);
     }
     private long determinant(double[][] mat, int size){
+        
         double det = 1;
         for(int i = 0; i < size; i++){
             int pivot = i;
@@ -34,6 +35,7 @@ class Solution {
             if(Math.abs(mat[pivot][i]) < 1e-9){
                 return 0;
             }
+
             if(i != pivot){
                 double[] temp = mat[i];
                 mat[i] = mat[pivot];
