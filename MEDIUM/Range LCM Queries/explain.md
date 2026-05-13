@@ -1,30 +1,31 @@
-Approach
-I used a Segment Tree where every node stores the LCM of a range.
+# Approach
 
-Steps:
+- I used a Segment Tree where every node stores the LCM of a range.
 
-Build the segment tree
+## Steps:
 
-Leaf node stores the array value.
+### 1. Build the segment tree
 
-Internal node stores LCM of left child and right child.
+- Leaf node stores the array value.
 
-For update query [1, index, value]
+- Internal node stores LCM of left child and right child.
 
-Move to that index in the tree.
+### 2. For update query [1, index, value]
 
-Replace old value with new value.
+- Move to that index in the tree.
 
-Recalculate LCM while returning back.
+- Replace old value with new value.
 
-For range query [2, L, R]
+- Recalculate LCM while returning back.
 
-Traverse only the required segments.
+### 3.For range query [2, L, R]
 
-Combine answers using LCM.
+- Traverse only the required segments.
 
-I also used GCD while calculating LCM because:
+- Combine answers using LCM.
 
-![alt text](e0795266-74e9-46c4-8d93-099e2d94db16_1778554308.png)
+### I also used GCD while calculating LCM because:
 
-This avoids unnecessary overflow compared to (a*b)/gcd.
+# ![alt text](e0795266-74e9-46c4-8d93-099e2d94db16_1778554308.png)
+
+- This avoids unnecessary overflow compared to (a*b)/gcd.
