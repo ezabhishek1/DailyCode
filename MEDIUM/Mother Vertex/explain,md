@@ -2,3 +2,21 @@
 
 A mother vertex in a directed graph is a vertex from which all other vertices can be reached.  
 The intuition is that if we perform DFS on all unvisited nodes, the last finished vertex from DFS traversal is a potential candidate for the mother vertex. This is because such a vertex is the one that finishes last in DFS, meaning it has the maximum reachability.
+
+
+#  Approach
+1. Perform DFS traversal for all unvisited vertices.
+   - Keep track of the last finished vertex as the candidate mother vertex.
+2. After one full traversal, verify the candidate:
+   - Run DFS starting from this candidate.
+   - If this DFS visits all nodes, then the candidate is indeed the mother vertex.
+   - Otherwise, no mother vertex exists, return -1.
+
+# Complexity
+- Time Complexity:
+  - DFS traversal takes O(V + E), where V is the number of vertices and E is the number of edges.  
+  - Since we run DFS twice at most, total = O(V + E).
+- Space Complexity:
+  - Arrays isVisited and check of size V are used.  
+  - Recursive DFS call stack can go up to O(V).  
+  - Overall = O(V).
