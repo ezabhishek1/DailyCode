@@ -26,3 +26,5 @@ Combine answers using LCM.
 I also used GCD while calculating LCM because:
 
 ![alt text](e0795266-74e9-46c4-8d93-099e2d94db16_1778554308.png)
+
+This avoids unnecessary overflow compared to (a*b)/gcd.
