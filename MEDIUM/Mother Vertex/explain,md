@@ -1,0 +1,4 @@
+# Intuition
+
+A mother vertex in a directed graph is a vertex from which all other vertices can be reached.  
+The intuition is that if we perform DFS on all unvisited nodes, the last finished vertex from DFS traversal is a potential candidate for the mother vertex. This is because such a vertex is the one that finishes last in DFS, meaning it has the maximum reachability.
